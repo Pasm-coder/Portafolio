@@ -1,0 +1,49 @@
+body {
+    background-color:aliceblue;
+}
+
+.img{
+    position: absolute;
+    left: 755px;
+    height: 350px;
+
+
+}
+.text{
+    font-size: 20px;
+    font-family: 'Mulish', sans-serif;
+    margin-top:100px;
+    margin-bottom: 150px;
+    margin-left: 100px;
+    
+}
+
+.letters{
+
+    font-family: 'Mulish', sans-serif;
+
+}
+
+/* Responsive for phone*/
+
+
+@media screen and (max-width:414px){
+    .img{
+        position: absolute;
+        left: 30px;
+        height: 350px;
+
+    
+    }
+
+    .text{
+        font-size: 15px;
+        font-family: 'Mulish', sans-serif;
+        margin-top:400px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right:5px ;
+        
+    }
+
+}

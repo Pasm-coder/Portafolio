@@ -1,0 +1,51 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<img src="{% static "perfil.png"%}" alt="" class="img">
+
+<div class="text">
+
+<p> Hola, mi nombre es Paola, soy programadora Full-Stack,<br>con conocimientos técnicos en Front-end y Back-end, <br>he trabajado con distintos lenguajes de programación <br>como lo son HTML, CSS, SASS, Javascript,  Typescript,<br> Python, SQL, y frameworks cómo Angular y Django. </p>
+
+</div>
+
+
+
+<div class="row my-4 text-center">
+
+    <h3>My Projects</h3>
+
+        {% for project in projects %}
+
+  <div class="col-md-4 p-4">
+    <div class="card.text-white.mb-3rd ">
+        <div class="card-body">
+            <h2>{{project.title}}</h2>
+
+            <p class="letters">{{project.descripcion}}</p>
+            <img src="{{project.images.url}}" alt="{{project.title}}" class="img-fluid">
+        
+            {% if project.url %}
+        
+            <a href="{{project.url}}">{{project.url}}</a>
+        
+            {% endif %}
+        </div>
+    </div>
+  </div>
+
+    {% endfor %}
+
+    {% endblock %}
+
+
+</div>
+
+
